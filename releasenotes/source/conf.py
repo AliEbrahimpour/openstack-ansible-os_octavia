@@ -59,8 +59,8 @@ copyright = '2014-2016, OpenStack-Ansible Contributors'
 description = 'OpenStack-Ansible deploys OpenStack environments using Ansible.'
 project = 'OpenStack-Ansible'
 role_name = 'os_heat'
-target_name = 'openstack-ansible-' + role_name
-title = 'OpenStack-Ansible Release Notes: ' + role_name + 'role'
+target_name = f'openstack-ansible-{role_name}'
+title = f'OpenStack-Ansible Release Notes: {role_name}role'
 
 # Release notes do not need a version number in the title, they
 # cover multiple releases.
@@ -70,7 +70,7 @@ release = ''
 version = ''
 
 # openstackdocstheme options
-openstackdocs_repo_name = 'openstack/' + target_name
+openstackdocs_repo_name = f'openstack/{target_name}'
 openstackdocs_bug_project = project.lower()
 openstackdocs_bug_tag = ''
 
@@ -191,7 +191,7 @@ html_static_path = ['_static']
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = target_name + '-docs'
+htmlhelp_basename = f'{target_name}-docs'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -199,10 +199,7 @@ htmlhelp_basename = target_name + '-docs'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, target_name + '.tex',
-     title, author, 'manual'),
-]
+latex_documents = [(master_doc, f'{target_name}.tex', title, author, 'manual')]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
