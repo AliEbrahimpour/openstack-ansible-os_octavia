@@ -62,11 +62,11 @@ copyright = '2014-2016, OpenStack-Ansible Contributors'
 description = 'OpenStack-Ansible deploys OpenStack environments using Ansible.'
 project = 'OpenStack-Ansible'
 role_name = 'os_octavia'
-target_name = 'openstack-ansible-' + role_name
-title = 'OpenStack-Ansible Documentation: ' + role_name + ' role'
+target_name = f'openstack-ansible-{role_name}'
+title = f'OpenStack-Ansible Documentation: {role_name} role'
 
 # openstackdocstheme options
-openstackdocs_repo_name = 'openstack/' + target_name
+openstackdocs_repo_name = f'openstack/{target_name}'
 openstackdocs_pdf_link = True
 openstackdocs_bug_project = project.lower()
 openstackdocs_bug_tag = ''
@@ -208,7 +208,7 @@ html_static_path = ['_static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = target_name + '-docs'
+htmlhelp_basename = f'{target_name}-docs'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -216,9 +216,15 @@ htmlhelp_basename = target_name + '-docs'
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'doc-' + target_name + '.tex',
-     title.replace("_", r"\_"), author, 'manual'),
+    (
+        master_doc,
+        f'doc-{target_name}.tex',
+        title.replace("_", r"\_"),
+        author,
+        'manual',
+    )
 ]
+
 
 latex_use_xindy = False
 
